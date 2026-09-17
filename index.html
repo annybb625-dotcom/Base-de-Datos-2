@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💜 Manual MS-SQL Server - Edición Lila</title>
+<style>
+    :root {
+        --lila-principal: #B19CD9;
+        --lila-intenso: #7B5EA7;
+        --lila-claro: #E6E0F8;
+        --lila-oscuro: #4A3B6B;
+        --blanco: #FFFFFF;
+        --negro-suave: #2D2D2D;
+        --morado: #8B5CF6;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+        font-family: 'Poppins', 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #E6E0F8 0%, #B19CD9 100%);
+        color: var(--negro-suave);
+        line-height: 1.7;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    header {
+        background: linear-gradient(135deg, var(--lila-intenso), var(--morado));
+        color: white;
+        padding: 60px 30px;
+        text-align: center;
+        border-radius: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 15px 40px rgba(123, 94, 167, 0.4);
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::before {
+        content: "💜";
+        position: absolute;
+        font-size: 200px;
+        opacity: 0.1;
+        top: -50px;
+        left: -30px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        text-shadow: 3px 3px 8px rgba(0,0,0,0.3);
+        position: relative;
+        z-index: 1;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.95;
+        position: relative;
+        z-index: 1;
+    }
+
+    .bt21-row {
+        font-size: 2.5rem;
+        margin-top: 20px;
+        letter-spacing: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 30px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    nav.sidebar {
+        background: white;
+        padding: 25px 20px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(123, 94, 167, 0.15);
+        height: fit-content;
+        position: sticky;
+        top: 20px;
+        border: 3px solid var(--lila-claro);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    nav.sidebar h3 {
+        color: var(--lila-intenso);
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+        border-bottom: 2px dashed var(--lila-principal);
+        padding-bottom: 10px;
+    }
+
+    nav.sidebar ul { list-style: none; }
+    nav.sidebar li { margin: 8px 0; }
+
+    nav.sidebar a {
+        color: var(--lila-oscuro);
+        text-decoration: none;
+        display: block;
+        padding: 8px 12px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+    nav.sidebar a:hover {
+        background: var(--lila-claro);
+        transform: translateX(5px);
+        color: var(--lila-intenso);
+    }
+
+    main {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(123, 94, 167, 0.15);
+        border: 3px solid var(--lila-claro);
+    }
+
+    section {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+        border-bottom: 2px dashed var(--lila-claro);
+    }
+
+    section:last-child { border-bottom: none; }
+
+    h2 {
+        color: var(--lila-intenso);
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+        background: linear-gradient(90deg, var(--lila-claro), transparent);
+        border-left: 6px solid var(--lila-intenso);
+        border-radius: 10px;
+    }
+
+    h3 {
+        color: var(--lila-oscuro);
+        font-size: 1.3rem;
